@@ -3,7 +3,70 @@
 ### Name : Jayasree R
 ### Register Number : 212223040074
 
-## AIM
+## AIM:
+To develop a Simple Web Server using Spring Boot that can handle basic HTTP requests and return appropriate responses through RESTful endpoints.
+## ALGORITHM:
+Start a New Spring Boot Project:
+
+Use Spring Initializr (https://start.spring.io/)
+
+Select dependencies: Spring Web
+
+Create the Main Application Class:
+
+This class contains the main() method with @SpringBootApplication annotation to bootstrap the application.
+
+Create a Controller Class:
+
+Create a class annotated with @RestController.
+
+Define one or more HTTP request handler methods using @GetMapping, @PostMapping, etc.
+
+Write Endpoint Methods:
+
+Inside the controller, define a simple method for handling GET requests (e.g., return “Hello World” when /hello is accessed).
+
+Run the Application:
+
+Run the application using your IDE or via the command line (mvn spring-boot:run or ./mvnw spring-boot:run).
+
+Test the Endpoint:
+
+Open a web browser or use Postman to visit:
+http://localhost:8080/hello
+
+You should see the output (e.g., "Hello World").
+
+Stop the Server:
+
+Stop the Spring Boot server once testing is complete.
+
+
+## Program 
+
+simple-web-server/
+├── src/
+│   └── main/
+│       ├── java/
+│       │   └── com.example.demo/
+│       │       ├── DemoApplication.java
+│       │       └── HelloController.java
+│       └── resources/
+│           └── application.properties
+├── pom.xml
+
+ ### Pom.xml
+```
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.example</groupId>
+    <artifactId>simple-web-server</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>Simple Web Server</name>
     <description>Demo project for Spring Boot Web Server</description>
 
     <parent>
@@ -14,6 +77,7 @@
     </parent>
 
     <dependencies>
+        <!-- Spring Boot Web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -28,13 +92,12 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
 ```
 
 ### DemoApplication.java
+```
 
-```java
 package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
@@ -42,16 +105,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class DemoApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class, args);
     }
 }
+
+```
+### HelloController.java
 ```
 
-### HelloController.java
-
-```java
 package com.example.demo;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -65,20 +127,15 @@ public class HelloController {
         return "Hello, Spring Boot!";
     }
 }
+
 ```
-
-### application.properties
-
-```properties
-server.port=8080
+### application.properties:
 ```
+ server.port=8081
+```
+## Output:
 
----
+<img width="1912" height="1188" alt="Screenshot 2026-04-24 at 2 12 15 PM" src="https://github.com/user-attachments/assets/603abcda-1556-4d47-b00c-e7e3773f7be3" />
 
-## OUTPUT
-
- <img width="657" height="444" alt="image" src="https://github.com/user-attachments/assets/95e9b9db-009e-43e3-b82a-7740153a00b6" />
-
-## RESULT
-
-Thus, a Simple Web Server using Spring Boot that can handle basic HTTP requests and return appropriate responses through RESTful endpoints was developed and executed successfully.
+## Result : 
+thus the Simple Web Server using Spring Boot that can handle basic HTTP requests and return appropriate responses through RESTful endpoints is sucessfully completed.
